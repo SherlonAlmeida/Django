@@ -1,0 +1,34 @@
+-------------------------------------
+------- CONFIGURAÇÃO INICIAL --------
+-------------------------------------
+
+Criar ambiente virtual
+    python3 -m venv my_django_env
+
+Ir até a pasta do projeto usando o comando 'cd'
+
+Ativar o ambiente virtual para o projeto
+    .\my_django_env\Scripts\activate
+
+Instalar o Django
+    pip install django
+
+Se for adicionar o projeto no git, ignorar a pasta do ambiente virtual
+    Inicializar o repositório: git init
+    Criar arquivo .gitignore
+    Adicionar a pasta a ser ignorada: /my_django_env
+
+Atualizar o pip dentro do ambiente virtual:
+    python.exe -m pip install --upgrade pip
+
+Inicializar um projeto Django (Já vai criar alguns arquivos importantes):
+    django-admin startproject first_project
+
+Entrar na pasta do projeto pelo terminal, usando o comando "cd"
+    cd first_project
+
+Executar o comando para inicializar o servidor
+    python manage.py runserver
+
+Acessar pelo seu navegador o seguinte link:
+    http://127.0.0.1:8000/

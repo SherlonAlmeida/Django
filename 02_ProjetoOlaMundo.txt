@@ -1,0 +1,39 @@
+-------------------------------------
+-------- Projeto: Olá Mundo --------
+-------------------------------------
+
+Parte 1:
+Criar um App Django: Django organiza a funcionalidade em apps.
+Para criar um novo app, execute o seguinte comando a partir do diretório raiz do projeto (onde está localizado o arquivo manage.py):
+    python manage.py startapp myapp
+Isso irá criar um novo diretório chamado "myapp" com a estrutura inicial do app.
+
+Parte2:
+Definir uma View: Em Django, uma view é uma função Python que recebe uma requisição web e retorna uma resposta web.
+Abra o arquivo myapp/views.py e adicione o seguinte código:
+    from django.http import HttpResponse
+    def hello(request):
+        return HttpResponse("Olá, Mundo!")
+
+
+Parte 3:
+Criar uma Rota de URL: URLs em Django são mapeadas para views usando padrões de URL.
+Abra o arquivo myproject/urls.py e adicione o seguinte código:
+    from django.urls import path
+    from myapp.views import hello
+
+    urlpatterns = [
+        path('hello/', hello, name='hello'),
+    ]
+
+Parte 4:
+Executar o Servidor de Desenvolvimento: Inicie novamente o servidor de desenvolvimento do Django com o seguinte comando:
+    python manage.py runserver
+
+Parte 5:
+Acessar a Página "Olá, Mundo!": Abra um navegador da web e acesse http://127.0.0.1:8000/hello/.
+Você deverá ver a mensagem "Olá, Mundo!" exibida na página.
+
+Parte 6:
+Parabéns! Você criou um projeto "Olá, Mundo!" em Django.
+Você pode continuar adicionando mais views, templates e funcionalidades à sua aplicação Django, de acordo com suas necessidades.
