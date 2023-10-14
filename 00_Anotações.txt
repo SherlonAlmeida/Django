@@ -1,3 +1,8 @@
+Organização deste repositório:
+	my_django_env: É a pasta contendo o ambiente virtual com o django instalado.
+	hello_django: É a pasta do projeto "Olá Mundo" e "Calculadora".
+	agenda: É a pasta do projeto "Agenda" do curso da DIO.
+
 Estrutura básica do Django
 	core
 		migrations
