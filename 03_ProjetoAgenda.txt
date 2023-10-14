@@ -28,6 +28,27 @@ Acessar a página e logar:
     http://127.0.0.1:8000/admin
 
 Parte 5:
+Criar e configurar as tabelas do banco de dados usando o arquivo core/models.py
+Adicionar as classes que representarão as tabelas do banco de dados.
+Por exemplo:
+    class Evento(models.Model):
+        titulo = models.CharField(max_length=100)
+        descricao = models.TextField(blank=True, null=True)
+        data_evento = models.DateTimeField()
+        data_criacao = models.DateTimeField(auto_now=True) #Insere a hora atual neste campo
+Transformar as classes criadas em models.py em tabelas do banco de dados:
+    python manage.py makemigrations core   #Cria o arquivo na pasta '/migrations'.
+    python manage.py sqlmigrate core 0001  #Verifica o SQL a ser gerado
+    python manage.py migrate core 0001     #Realiza a migração do Banco de Dados
+
+Parte 6:
+Registrar o Model criado no arquivo 'core/admin.py'
+    from core.models import Evento #Sherlon: Adicionado
+    admin.site.register(Evento)#Sherlon: Adicionado
+
+Parte 7:
+
+
 Definir uma View: Em Django, uma view é uma função Python que recebe uma requisição web e retorna uma resposta web.
 Abra o arquivo myapp/views.py e adicione o seguinte código:
     from django.http import HttpResponse
