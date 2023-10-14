@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core import views
+from core import views #Sherlon: Adicionado para importar as views do meu APP Core
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', views.hello)
+    path('hello/', views.hello),
+    path('calculadora/<int:num1>/<int:num2>/<operacao>/', views.calculadora),
 ]
