@@ -1,0 +1,23 @@
+Estrutura básica do Django
+	core
+		migrations
+			__init__.py
+			admin.py ----> Permite gerenciar o BD com uma interface pré-pronta fornecida pelo Django.
+			apps.py
+			models.py ---> Realiza a abstração dos objetos do BD para classes Python.
+			tests.py
+			views.py ----> Processa e retorna a resposta para o cliente que fez a requisição.
+	hello_django
+		__init__.py
+		settings.py
+		urls.py ---------> Define os redirecionamentos do sistema.
+		wsgi.py ---------> Web Server gateway Interface: é o servidor para o meu sistema.
+		static  ---------> Pasta responsável por armazenar arquivos estáticos, como HTML, CSS, JS, IMAGENS, etc...
+			exemplo.css
+			exemplo.js
+			icone.png
+			bootstrap.css
+	templates ----------> Pasta responsável por armazenar todos os arquivos HTML da aplicação.
+		index.html
+	db.sqlite3
+	manage.py
