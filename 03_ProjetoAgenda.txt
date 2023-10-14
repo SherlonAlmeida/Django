@@ -47,12 +47,10 @@ Registrar o Model criado no arquivo 'core/admin.py'
     admin.site.register(Evento)#Sherlon: Adicionado
 
 Parte 7:
-
-
 Definir uma View: Em Django, uma view é uma função Python que recebe uma requisição web e retorna uma resposta web.
-Abra o arquivo myapp/views.py e adicione o seguinte código:
+Abra o arquivo core/views.py e adicione o seguinte código:
     from django.http import HttpResponse
-    def hello(request):
+    def eventos(request):
         return HttpResponse("Olá, Mundo!")
 
 

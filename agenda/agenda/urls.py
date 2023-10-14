@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from core import views #Sherlon: Adicionado para importar as views do meu APP Core
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('eventos/<titulo_evento>/', views.eventos),
 ]
