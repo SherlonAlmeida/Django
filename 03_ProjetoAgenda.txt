@@ -53,25 +53,18 @@ Abra o arquivo core/views.py e adicione o seguinte código:
     def eventos(request):
         return HttpResponse("Olá, Mundo!")
 
+Parte 8:
+Criar uma pasta chamada "templates", a qual irá conter os arquivos html da aplicação.
+Criar um arquivo .html dentro da pasta templates.
+Criar uma view que renderiza o arquivo .html criado dentro do arquivo 'core/views.py'.
+Criar a rota dentro do arquivo 'agenda/urls.py'
+Adicionar o caminho da pasta template no arquivo de configurações 'agenda/settings.py'
+    'DIRS': [os.path.join(BASE_DIR, 'templates')],
 
-Parte 3:
-Criar uma Rota de URL: URLs em Django são mapeadas para views usando padrões de URL.
-Abra o arquivo myproject/urls.py e adicione o seguinte código:
-    from django.urls import path
-    from myapp.views import hello
 
-    urlpatterns = [
-        path('hello/', hello, name='hello'),
-    ]
 
-Parte 4:
+Parte Final:
 Executar o Servidor de Desenvolvimento: Inicie novamente o servidor de desenvolvimento do Django com o seguinte comando:
     python manage.py runserver
-
-Parte 5:
-Acessar a Página "Olá, Mundo!": Abra um navegador da web e acesse http://127.0.0.1:8000/hello/.
-Você deverá ver a mensagem "Olá, Mundo!" exibida na página.
-
-Parte 6:
-Parabéns! Você criou um projeto "Olá, Mundo!" em Django.
+Acessar a Página: Abra um navegador da web e acesse http://127.0.0.1:8000/<caminho>/.
 Você pode continuar adicionando mais views, templates e funcionalidades à sua aplicação Django, de acordo com suas necessidades.

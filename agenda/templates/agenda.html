@@ -1,0 +1,14 @@
+{% extends "model-page.html" %}
+
+{% block content %}
+    <h2>Agendamentos</h2>
+
+    <ul style="font-size: 22px;">
+    <!-- Executa comandos do Python -->
+    {% for evento in eventos %}
+        <!-- Acessa o conteudo de variáveis -->
+        <li>{{evento.titulo}} - {{evento.get_data_evento}}</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}

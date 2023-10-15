@@ -17,8 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core import views #Sherlon: Adicionado para importar as views do meu APP Core
+from django.views.generic import RedirectView 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('eventos/<titulo_evento>/', views.eventos),
+    path('agenda/', views.lista_eventos),
+    path('', RedirectView.as_view(url="/agenda/")), #Definindo a página 'agenda' como Inicial usando RedirectView
 ]
