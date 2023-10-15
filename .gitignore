@@ -1,2 +1,4 @@
 #Ignorar o tracking da pasta do ambiente virtual
 /my_django_env
+*.pyc
+.idea
