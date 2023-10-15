@@ -11,7 +11,17 @@
     <!-- Executa comandos do Python -->
     {% for evento in eventos %}
         <!-- Acessa o conteudo de variáveis -->
-        <li>{{evento.titulo}} - {{evento.get_data_evento}}</li>
+        <li>
+            {{evento.titulo}}
+            ( <a href="evento/?id={{ evento.id }}">Editar</a>
+            / <a href="evento/delete/{{ evento.id }}">Excluir</a> )
+
+            <ul style="font-size: 18px;">
+                <li>Local: {{ evento.local }}</li>
+                <li>Data/Hora: {{evento.get_data_evento}}</li>
+                <li>Descrição: {{ evento.descricao }}</li>
+            </ul>
+        </li>
     {% endfor %}
     </ul>
 

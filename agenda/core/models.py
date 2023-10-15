@@ -17,5 +17,10 @@ class Evento(models.Model):
     def __str__(self):
         return self.titulo
     
+    #Método para mostrar a DATA/HORA formatada na tela
     def get_data_evento(self):
         return self.data_evento.strftime('%d/%m/%Y | %Hh%Mm')
+    
+    #Método para atualizar a DATA/HORA de acordo com o formato PADRÃO do BD
+    def get_data_input_evento(self):
+        return self.data_evento.strftime('%Y-%m-%dT%H:%M')
