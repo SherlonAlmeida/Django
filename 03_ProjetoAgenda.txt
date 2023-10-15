@@ -41,6 +41,8 @@ Transformar as classes criadas em models.py em tabelas do banco de dados:
     python manage.py sqlmigrate core 0001  #Verifica o SQL a ser gerado
     python manage.py migrate core 0001     #Realiza a migração do Banco de Dados
 
+    OBS.: Sempre que alterar o banco de dados via models.py, é preciso aplicar os comandos acima para que seja de fato aplicadas as modificações.
+
 Parte 6:
 Registrar o Model criado no arquivo 'core/admin.py'
     from core.models import Evento #Sherlon: Adicionado
