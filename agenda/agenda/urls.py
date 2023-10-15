@@ -23,6 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('eventos/<titulo_evento>/', views.eventos),
     path('agenda/', views.lista_eventos),
+    path('agenda/evento/', views.evento),
+    path('agenda/evento/submit', views.submit_evento),
     path('', RedirectView.as_view(url="/agenda/")), #Definindo a página 'agenda' como Inicial usando RedirectView
     path('login/', views.login_user),
     path('login/submit', views.submit_login),
