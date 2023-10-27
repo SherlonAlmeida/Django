@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User #Sherlon: importa a tabela default "User"
+from datetime import datetime
 
 # Create your models here.
 
@@ -24,3 +25,9 @@ class Evento(models.Model):
     #Método para atualizar a DATA/HORA de acordo com o formato PADRÃO do BD
     def get_data_input_evento(self):
         return self.data_evento.strftime('%Y-%m-%dT%H:%M')
+    
+    #Método para retornar True caso o evento esteja atrasado
+    def get_evento_atrasado(self):
+        if self.data_evento < datetime.now():
+            return True
+        return False
