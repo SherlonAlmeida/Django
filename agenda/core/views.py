@@ -98,6 +98,7 @@ def lista_eventos(request):
     #evento = Evento.objects.all() #Obtem TODOS os dados do BD
     evento = Evento.objects.filter(usuario=request.user)#,     #Obtem os dados do BD do USUARIO LOGADO
                                    #data_evento__gt = data_atual) #__gt significa (Maior que) e __lt significa (Menor que)
+    evento = evento.order_by('data_evento') #Ordena eventos por Data
     dados = {'eventos': evento}
     return render(request, "agenda.html", dados)
 

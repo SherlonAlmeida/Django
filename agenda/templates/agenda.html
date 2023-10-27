@@ -13,7 +13,7 @@
         <!-- Acessa o conteudo de variáveis -->
         <li>
             <div style={% if evento.get_evento_atrasado %}
-                            "color:red"
+                            "opacity:0.25;"
                         {% endif %} >
                 {{evento.titulo}}
                 ( <a href="evento/?id={{ evento.id }}">Editar</a>
